@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   check:
-    name: Lint and Build
+    name: Test, Lint and Build
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,9 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+      - name: Test response storage and results endpoint
+        run: npm test
 
       - name: Build application
         run: npm run build

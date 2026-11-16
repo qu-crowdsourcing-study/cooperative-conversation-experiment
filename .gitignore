@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Participant results stay on disk, outside version control.
+/results/*
+!/results/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
